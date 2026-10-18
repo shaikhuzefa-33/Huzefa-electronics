@@ -1,0 +1,6 @@
+{
+  "name": "Huzefa Electronics",
+  "description": "A luxury 3D electronics e-commerce showroom inspired by Apple, Samsung, and Sony featuring realistic 3D product interactions, deep teal and matte gray aesthetic.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

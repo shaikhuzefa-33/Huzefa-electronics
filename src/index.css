@@ -1,0 +1,109 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --bg-primary: #0E4D57;
+    --bg-secondary: #0a3a42;
+    --matte-gray: #8B9095;
+    --text-silver: #D1D5DB;
+    --accent-silver: #E2E8F0;
+  }
+
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, h4, .font-display {
+    font-family: 'Syne', 'Plus Jakarta Sans', sans-serif;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Custom Sleek Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #09333a;
+}
+::-webkit-scrollbar-thumb {
+  background: #8B9095;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #A0A5AA;
+}
+
+/* Glassmorphism & Showroom Aesthetics */
+.glass-panel {
+  background: rgba(14, 77, 87, 0.65);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(139, 144, 149, 0.22);
+}
+
+.glass-card {
+  background: linear-gradient(135deg, rgba(20, 88, 99, 0.55) 0%, rgba(10, 52, 60, 0.7) 100%);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(139, 144, 149, 0.28);
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.5);
+}
+
+.glass-card-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass-card-hover:hover {
+  border-color: rgba(226, 232, 240, 0.45);
+  transform: translateY(-6px);
+  box-shadow: 0 20px 40px -12px rgba(6, 33, 38, 0.7), 0 0 24px rgba(139, 144, 149, 0.15);
+}
+
+/* Silver & Metallic Accents */
+.silver-gradient-text {
+  background: linear-gradient(180deg, #FFFFFF 0%, #E2E8F0 45%, #8B9095 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.silver-border-glow {
+  position: relative;
+}
+.silver-border-glow::after {
+  content: '';
+  position: absolute;
+  inset: -1px;
+  background: linear-gradient(90deg, transparent, rgba(226, 232, 240, 0.4), transparent);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* 3D Canvas wrapper */
+.three-canvas-container {
+  touch-action: none;
+}
+
+/* Animated Underline for Nav */
+.nav-link-indicator {
+  position: relative;
+}
+.nav-link-indicator::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #8B9095;
+  transition: width 0.3s ease, left 0.3s ease;
+  border-radius: 2px;
+}
+.nav-link-indicator:hover::after,
+.nav-link-indicator.active::after {
+  width: 100%;
+  left: 0;
+  background: #E2E8F0;
+  box-shadow: 0 0 8px rgba(226, 232, 240, 0.6);
+}

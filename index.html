@@ -1,0 +1,1193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Huzefa Electronics | Premium 3D Electronics Showroom</title>
+    <meta name="description" content="Discover Huzefa Electronics: luxury smartphones, gaming laptops, 8K OLED TVs, spatial audio earbuds, smart watches, and cinema cameras in an immersive 3D showroom." />
+    <meta name="keywords" content="electronics, 3D showroom, luxury tech, smartphones, gaming laptops, smart TV, OLED, wireless earbuds, smart watches, Huzefa" />
+
+    <!-- Open Graph / Social Media -->
+    <meta property="og:title" content="Huzefa Electronics | Premium 3D Electronics Showroom" />
+    <meta property="og:description" content="A luxury 3D electronics showroom inspired by Apple, Samsung, and Sony featuring realistic 3D product interactions, deep teal and matte gray aesthetic." />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Huzefa Electronics" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Huzefa Electronics | Premium 3D Electronics Showroom" />
+    <meta name="twitter:description" content="Experience the pinnacle of audio, computing, and visual innovation in an interactive 3D showroom." />
+
+    <!-- Theme Color & Mobile Meta -->
+    <meta name="theme-color" content="#0E4D57" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+    <!-- Google Fonts: Plus Jakarta Sans & Syne -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Syne:wght@600;700;800&display=swap" rel="stylesheet" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Structured Data JSON-LD for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ElectronicsStore",
+      "name": "Huzefa Electronics",
+      "image": "https://images.unsplash.com/photo-1550009158-9ebf69173e03?auto=format&fit=crop&w=1200&q=80",
+      "description": "Premium 3D showroom featuring cutting-edge gaming laptops, smartphones, 8K TVs, audio, and optics.",
+      "priceRange": "$$$$",
+      "telephone": "+1-800-848-9332",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "742 Silicon Horizon Blvd, Suite 100",
+        "addressLocality": "San Francisco",
+        "addressRegion": "CA",
+        "postalCode": "94107",
+        "addressCountry": "US"
+      }
+    }
+    </script>
+  </head>
+
+  <body>
+
+    <!-- ============================================================
+         LOADING SCREEN — % Progress
+         ============================================================ -->
+    <div id="loading-screen">
+      <!-- Brand H Logo Mark -->
+      <div class="loader-logo-mark">
+        <svg viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" width="110" height="110">
+          <!-- Dark rounded square background -->
+          <rect width="80" height="80" rx="14" fill="#0D1B2A"/>
+          <!-- Left vertical bar -->
+          <rect x="11" y="10" width="13" height="60" rx="3" fill="white"/>
+          <!-- Right vertical bar -->
+          <rect x="56" y="10" width="13" height="60" rx="3" fill="white"/>
+          <!-- Diagonal crossbar (white, parallelogram slanting bottom-left to top-right) -->
+          <polygon points="11,46 24,46 69,34 56,34" fill="white"/>
+          <!-- Blue lightning diagonal slash cutting through crossbar -->
+          <polygon points="28,46 40,34 52,34 40,46" fill="#009FE3"/>
+        </svg>
+      </div>
+      <!-- Brand Name — Stacked, matching image style -->
+      <div class="loader-brand-text">
+        <div class="brand-name">Huzefa</div>
+        <div class="brand-sub">Electronics</div>
+      </div>
+      <!-- Progress Bar -->
+      <div class="loader-progress-wrap">
+        <div class="loader-track">
+          <div class="loader-fill" id="loader-fill-bar"></div>
+        </div>
+        <span class="loader-percent-text" id="loader-percent">0%</span>
+      </div>
+      <span class="loader-tagline">Initialising 3D Showroom…</span>
+    </div>
+
+    <!-- Reading Progress Bar (now at top of content, not nav) -->
+    <div id="scroll-progress-bar"></div>
+
+    <!-- Mobile Hamburger Toggle (only visible on small screens) -->
+    <button class="mobile-menu-toggle" id="sidebar-mobile-toggle" onclick="window.huzefaApp.toggleMobileMenu()" title="Toggle Menu">
+      <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+      </svg>
+    </button>
+
+    <!-- Mobile Sidebar Overlay -->
+    <div id="mobile-nav-drawer" class="sidebar-mobile-overlay" onclick="window.huzefaApp.toggleMobileMenu()"></div>
+
+    <!-- ============================================================
+         LEFT SIDEBAR NAVIGATION
+         ============================================================ -->
+    <aside class="site-header" id="site-sidebar">
+      <!-- Brand Logo -->
+      <div class="sidebar-brand" onclick="window.huzefaApp.navigateTo('home')">
+        <div class="brand-h-icon">
+          <svg viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" width="40" height="40">
+            <rect width="44" height="44" rx="8" fill="#0D1B2A"/>
+            <rect x="6" y="5" width="7" height="34" rx="2" fill="white"/>
+            <rect x="31" y="5" width="7" height="34" rx="2" fill="white"/>
+            <polygon points="6,25 13,25 38,19 31,19" fill="white"/>
+            <polygon points="16,25 22,19 28,19 22,25" fill="#009FE3"/>
+          </svg>
+        </div>
+        <div class="brand-name-stack">
+          <span class="brand-name-primary">Huzefa</span>
+          <span class="brand-name-secondary">Electronics</span>
+        </div>
+      </div>
+
+      <!-- Divider -->
+      <div class="sidebar-divider"></div>
+
+      <!-- Main Navigation Links -->
+      <nav class="nav-inner" aria-label="Main navigation">
+        <ul class="nav-links-list">
+          <li>
+            <button class="nav-link-btn active" data-page="home">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+              Home
+            </button>
+          </li>
+          <li>
+            <button class="nav-link-btn" data-page="shop">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+              Shop
+            </button>
+          </li>
+          <li>
+            <button class="nav-link-btn" data-page="categories">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+              Categories
+            </button>
+          </li>
+          <li>
+            <button class="nav-link-btn" data-page="deals">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2Z"/></svg>
+              Deals <span class="nav-badge-hot">Hot</span>
+            </button>
+          </li>
+          <li>
+            <button class="nav-link-btn" data-page="compare">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+              Compare Lab
+            </button>
+          </li>
+          <li>
+            <button class="nav-link-btn" data-page="about">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4"/><path d="M12 8h.01"/></svg>
+              About
+            </button>
+          </li>
+          <li>
+            <button class="nav-link-btn" data-page="contact">
+              <svg width="17" height="17" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+              Contact
+            </button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Spacer -->
+      <div class="sidebar-spacer"></div>
+
+      <!-- Divider -->
+      <div class="sidebar-divider"></div>
+
+      <!-- Bottom Action Icons -->
+      <div class="nav-actions">
+        <button class="nav-icon-btn" onclick="window.huzefaApp.openSearchModal()" title="Search (Ctrl+K)">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <span class="sidebar-action-label">Search</span>
+        </button>
+        <button class="nav-icon-btn" onclick="window.huzefaApp.openWishlistDrawer()" title="Wishlist">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+          <span id="nav-wishlist-badge" class="nav-counter-badge" style="display:none;">0</span>
+          <span class="sidebar-action-label">Wishlist</span>
+        </button>
+        <button class="nav-icon-btn" onclick="window.huzefaApp.openCartDrawer()" title="Cart">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span id="nav-cart-badge" class="nav-counter-badge" style="display:none;">0</span>
+          <span class="sidebar-action-label">Cart</span>
+        </button>
+        <button class="nav-icon-btn" onclick="window.huzefaApp.openOrderTrackModal()" title="Track Order">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/><path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/><circle cx="17" cy="18" r="2"/><circle cx="7" cy="18" r="2"/></svg>
+          <span class="sidebar-action-label">Track</span>
+        </button>
+        <button class="nav-icon-btn" onclick="window.huzefaApp.openAuthModal()" title="VIP Account">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+          <span class="sidebar-action-label">Account</span>
+        </button>
+        <button class="nav-icon-btn" onclick="window.huzefaApp.navigateTo('compare')" title="Compare">
+          <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg>
+          <span id="nav-compare-badge" class="nav-counter-badge" style="display:none;">0</span>
+          <span class="sidebar-action-label">Compare</span>
+        </button>
+      </div>
+
+      <!-- AI Concierge Button -->
+      <button class="nav-ai-btn sidebar-ai-btn" onclick="window.huzefaApp.openAIDrawer()" title="AI Concierge">
+        <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+        Ask AI
+      </button>
+    </aside>
+
+    <!-- Main Content Area (Multi-View Single Page App) -->
+    <main id="main-content">
+      <!-- ==================================================================
+           PAGE 1: HOME VIEW
+           ================================================================== -->
+      <div id="view-home" class="showroom-view-page">
+        <!-- 1.1 Hero 3D Showroom Section -->
+        <section class="hero-section">
+          <div class="hero-bg-glow"></div>
+          <div class="site-container">
+            <div class="hero-grid">
+              <!-- Left Column: Device Details & Interactivity -->
+              <div class="hero-content">
+                <div class="hero-badge-tag">
+                  <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                  <span id="hero-badge">Flagship Allocation</span>
+                </div>
+
+                <h1 id="hero-title" class="hero-title silver-gradient-text">Titan Blade 18 Pro</h1>
+                <p id="hero-subtitle" class="hero-subtitle">Intel Core i9-14900HX • RTX 4090 16GB • 240Hz Mini-LED</p>
+                <p id="hero-description" class="hero-description">Precision milled aerospace-grade aluminum chassis with vapor chamber cooling, per-key RGB mechanical switches, and stunning 18-inch 4K UHD Mini-LED display.</p>
+
+                <!-- Pricing -->
+                <div class="hero-pricing-row">
+                  <span id="hero-price" class="hero-price">$3,299</span>
+                  <span id="hero-old-price" class="hero-original-price">$3,899</span>
+                  <span id="hero-discount-pill" class="hero-discount-pill">15% OFF</span>
+                </div>
+
+                <!-- Color Swatches -->
+                <div class="hero-swatches-section">
+                  <span class="swatch-label">Precision Finishes</span>
+                  <div id="hero-swatches-list" class="swatches-list"></div>
+                </div>
+
+                <!-- Hero Actions -->
+                <div class="hero-actions-row">
+                  <button id="hero-add-cart-btn" class="btn-primary">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                    Acquire Device
+                  </button>
+                  <button id="hero-inspect-btn" class="btn-secondary">
+                    <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    Full 3D Inspection
+                  </button>
+                </div>
+
+                <!-- Carousel Controls -->
+                <div class="hero-slider-nav">
+                  <button id="hero-prev-btn" class="slider-arrow-btn" title="Previous Flagship">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="15 18 9 12 15 6"/></svg>
+                  </button>
+                  <div id="hero-slider-pills" class="slider-pills-list"></div>
+                  <button id="hero-next-btn" class="slider-arrow-btn" title="Next Flagship">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="9 18 15 12 9 6"/></svg>
+                  </button>
+                  <button id="hero-autoplay-toggle" class="auto-play-toggle-btn">
+                    <span id="hero-autoplay-text">Auto-Slide: ON</span>
+                  </button>
+                </div>
+              </div>
+
+              <!-- Right Column: Interactive 3D Canvas / Photo Viewport -->
+              <div class="hero-stage-wrapper">
+                <!-- Mode Switcher -->
+                <div class="stage-mode-switcher">
+                  <button id="mode-btn-3d" class="mode-switch-btn active">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>
+                    3D Model
+                  </button>
+                  <button id="mode-btn-photo" class="mode-switch-btn">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/></svg>
+                    Photo
+                  </button>
+                </div>
+
+                <!-- Real-time 3D Three.js WebGL Container -->
+                <div id="hero-three-container"></div>
+
+                <!-- Alternative Photo View with Engineering Hotspots -->
+                <div id="hero-photo-view-box" class="hero-photo-view" style="display: none;">
+                  <div class="hero-photo-card">
+                    <img id="hero-photo-img" src="" alt="" class="hero-photo-img" />
+                    <!-- Hotspots Layer -->
+                    <div id="hero-hotspots-layer"></div>
+                  </div>
+                </div>
+
+                <!-- Bottom Toolbar Hints -->
+                <div class="stage-bottom-bar">
+                  <div class="stage-hint-pill">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                    Drag & Orbit in 3D
+                  </div>
+                  <button class="inspect-modal-trigger-btn" onclick="window.huzefaApp.openQuickView(window.huzefaApp.inspectProductId || 'huzefa-titan-blade-rtx4090')">
+                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 3h6v6"/><path d="M9 21H3v-6"/><path d="M21 3l-7 7"/><path d="M3 21l7-7"/></svg>
+                    Inspect Details
+                  </button>
+                </div>
+
+                <!-- Store Boy Float Panel -->
+                <div class="store-boy-card">
+                  <img src="store-boy.jpg" alt="Store Boy" class="store-boy-avatar"
+                    onerror="this.src='https://ui-avatars.com/api/?name=H&background=0E4D57&color=00E5FF&size=56&bold=true&rounded=true'"/>
+                  <div class="store-boy-info">
+                    <span class="store-boy-name">Huzefa</span>
+                    <span class="store-boy-role">🏪 Store Boy</span>
+                    <span class="store-boy-live-dot">Available in-store</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1.2 Value Proposition Bar -->
+        <section class="value-props-bar">
+          <div class="site-container">
+            <div class="value-props-grid">
+              <div class="value-prop-card">
+                <div class="value-prop-icon">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </div>
+                <div>
+                  <h4 class="value-prop-title">Armored Express Freight</h4>
+                  <p class="value-prop-desc">Insured climate-controlled transport globally</p>
+                </div>
+              </div>
+
+              <div class="value-prop-card">
+                <div class="value-prop-icon">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></svg>
+                </div>
+                <div>
+                  <h4 class="value-prop-title">3-Year Platinum Care</h4>
+                  <p class="value-prop-desc">Comprehensive hardware & burn-in replacement</p>
+                </div>
+              </div>
+
+              <div class="value-prop-card">
+                <div class="value-prop-icon">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 12a9 9 0 0 1 9-9 9.75 9.75 0 0 1 6.74 2.74L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-9 9 9.75 9.75 0 0 1-6.74-2.74L3 16"/><path d="M8 16H3v5"/></svg>
+                </div>
+                <div>
+                  <h4 class="value-prop-title">30-Day Money-Back</h4>
+                  <p class="value-prop-desc">Unconditional reference acoustic trial period</p>
+                </div>
+              </div>
+
+              <div class="value-prop-card">
+                <div class="value-prop-icon">
+                  <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M14 9a2 2 0 0 1-2 2H6l-4 4V4c0-1.1.9-2 2-2h8a2 2 0 0 1 2 2v5Z"/><path d="M18 9h2a2 2 0 0 1 2 2v11l-4-4h-6a2 2 0 0 1-2-2v-1"/></svg>
+                </div>
+                <div>
+                  <h4 class="value-prop-title">24/7 Showroom Concierge</h4>
+                  <p class="value-prop-desc">Direct private consultation with acoustic lab engineers</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1.3 Flash Allocation Live Ticker Banner -->
+        <section class="flash-sale-section">
+          <div class="site-container">
+            <div class="flash-sale-card">
+              <div class="flash-sale-left">
+                <span class="flash-sale-tag">
+                  <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+                  Certified Allocation Window
+                </span>
+                <h2 class="flash-sale-title font-display text-white">Today's Preferred Collector Pricing</h2>
+                <p class="text-silver" style="max-width: 540px; font-size: 0.92rem;">Limited-production serial numbers for the Titan Blade 18 Pro and Cinematic Master 77" 8K OLED evo reserved at special allocation tiers.</p>
+              </div>
+
+              <!-- Live Digital Ticker -->
+              <div class="flash-sale-timer-wrap">
+                <div class="timer-unit-box">
+                  <span id="flash-sale-hours" class="timer-unit-num">13</span>
+                  <span class="timer-unit-label">Hours</span>
+                </div>
+                <span class="timer-colon">:</span>
+                <div class="timer-unit-box">
+                  <span id="flash-sale-mins" class="timer-unit-num">42</span>
+                  <span class="timer-unit-label">Mins</span>
+                </div>
+                <span class="timer-colon">:</span>
+                <div class="timer-unit-box">
+                  <span id="flash-sale-secs" class="timer-unit-num">19</span>
+                  <span class="timer-unit-label">Secs</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 1.4 Curated Categories Showcase -->
+        <section class="categories-showcase-section">
+          <div class="site-container">
+            <div class="section-header-block">
+              <span class="section-eyebrow">
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+                Architectural Portfolios
+              </span>
+              <h2 class="section-main-heading silver-gradient-text">Curated Engineering Collections</h2>
+              <p class="section-subtext">Every category is meticulously calibrated, pairing unibody aerospace materials with studio-grade micro-luma panels and acoustic transducers.</p>
+            </div>
+            <div id="curated-categories-grid" class="categories-showcase-grid"></div>
+          </div>
+        </section>
+
+        <!-- 1.5 Best Sellers & Flagships -->
+        <section style="padding: 4rem 0 6rem;">
+          <div class="site-container">
+            <div class="section-header-block">
+              <span class="section-eyebrow">Signature Reference Hardware</span>
+              <h2 class="section-main-heading silver-gradient-text">Showroom Best Sellers</h2>
+              <p class="section-subtext">The most coveted computing, acoustic, and visual masterpieces selected by audio engineers and digital creators.</p>
+            </div>
+            <div id="bestsellers-grid" class="products-grid"></div>
+          </div>
+        </section>
+      </div>
+
+      <!-- ==================================================================
+           PAGE 2: SHOP ALL CATALOG VIEW
+           ================================================================== -->
+      <div id="view-shop" class="showroom-view-page" style="display: none;">
+        <div class="site-container shop-page-wrap">
+          <div class="shop-layout-grid">
+            <!-- Filter Sidebar -->
+            <aside class="shop-filter-sidebar">
+              <!-- Categories Filter -->
+              <div>
+                <div class="filter-group-header">
+                  <span>Categories</span>
+                </div>
+                <div class="filter-categories-list">
+                  <button class="filter-category-btn active" data-cat="all">All Hardware</button>
+                  <button class="filter-category-btn" data-cat="gaming">Gaming Laptops</button>
+                  <button class="filter-category-btn" data-cat="smartphones">Smartphones</button>
+                  <button class="filter-category-btn" data-cat="tvs">8K OLED TVs</button>
+                  <button class="filter-category-btn" data-cat="audio">Lossless Hi-Fi Audio</button>
+                  <button class="filter-category-btn" data-cat="watches">Smart Watches</button>
+                  <button class="filter-category-btn" data-cat="cameras">Cinema Cameras</button>
+                </div>
+              </div>
+
+              <!-- Price Filter Slider -->
+              <div>
+                <div class="filter-group-header">
+                  <span>Price Ceiling</span>
+                </div>
+                <div class="price-slider-wrap">
+                  <input type="range" id="price-slider" class="price-range-slider" min="200" max="10000" step="100" value="5000" />
+                  <div class="price-readouts">
+                    <span>$200</span>
+                    <span id="price-val-max" style="color: var(--accent-cyan);">$5,000</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Value Props Mini -->
+              <div style="padding-top: 1rem; border-top: 1px solid var(--border-glass); font-size: 0.8rem; color: #9CA3AF; line-height: 1.5;">
+                <p>🔒 All devices calibrated and shipped with 3-Year Huzefa Platinum Care Warranty.</p>
+              </div>
+            </aside>
+
+            <!-- Main Catalog -->
+            <div>
+              <div class="shop-header-controls">
+                <span id="shop-results-count" class="shop-results-count">Showing 8 of 8 devices</span>
+                <div class="shop-sort-controls">
+                  <select id="shop-sort-select" class="shop-sort-select">
+                    <option value="featured">Featured First</option>
+                    <option value="price-asc">Price: Low to High</option>
+                    <option value="price-desc">Price: High to Low</option>
+                    <option value="rating">Top Rated</option>
+                  </select>
+
+                  <div class="shop-view-toggles">
+                    <button id="view-grid-btn" class="view-toggle-btn active" title="Grid Layout">
+                      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><rect width="7" height="7" x="3" y="3" rx="1"/><rect width="7" height="7" x="14" y="3" rx="1"/><rect width="7" height="7" x="14" y="14" rx="1"/><rect width="7" height="7" x="3" y="14" rx="1"/></svg>
+                    </button>
+                    <button id="view-list-btn" class="view-toggle-btn" title="List Layout">
+                      <svg width="16" height="16" fill="currentColor" viewBox="0 0 24 24"><line x1="8" y1="6" x2="21" y2="6"/><line x1="8" y1="12" x2="21" y2="12"/><line x1="8" y1="18" x2="21" y2="18"/><line x1="3" y1="6" x2="3.01" y2="6"/><line x1="3" y1="12" x2="3.01" y2="12"/><line x1="3" y1="18" x2="3.01" y2="18"/></svg>
+                    </button>
+                  </div>
+                </div>
+              </div>
+
+              <div id="shop-products-grid" class="products-grid"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================================
+           PAGE 3: CATEGORIES VIEW
+           ================================================================== -->
+      <div id="view-categories" class="showroom-view-page" style="display: none;">
+        <div class="site-container" style="padding: 4rem 0 6rem;">
+          <div class="section-header-block">
+            <span class="section-eyebrow">Curated Showroom Portfolios</span>
+            <h1 class="section-main-heading silver-gradient-text">Architectural Collections</h1>
+            <p class="section-subtext">Every collection represents uncompromised industrial design, uniting Apple structural precision, Samsung micro-luma panel mastery, and Sony studio acoustic fidelity.</p>
+          </div>
+          <div class="categories-showcase-grid">
+            <!-- Generated from CATEGORIES data -->
+            <div class="category-portfolio-card" onclick="window.huzefaApp.filterByCategory('gaming')">
+              <img src="https://images.unsplash.com/photo-1603302576837-37561b2e2302?auto=format&fit=crop&w=800&q=80" alt="Gaming" class="category-portfolio-img" />
+              <div class="category-portfolio-overlay"></div>
+              <div class="category-card-top-content"><span class="category-models-count-tag">4 Reference Models</span></div>
+              <div class="category-card-bottom-content">
+                <h3 class="category-card-name">Gaming Workstations</h3>
+                <p class="category-card-desc">Aerospace aluminum chassis with RTX 4090 vapor chamber cooling and 240Hz Mini-LED calibrated panels.</p>
+                <span class="category-card-explore-btn">Explore Portfolio →</span>
+              </div>
+            </div>
+
+            <div class="category-portfolio-card" onclick="window.huzefaApp.filterByCategory('smartphones')">
+              <img src="https://images.unsplash.com/photo-1598327105666-5b89351aff97?auto=format&fit=crop&w=800&q=80" alt="Smartphones" class="category-portfolio-img" />
+              <div class="category-portfolio-overlay"></div>
+              <div class="category-card-top-content"><span class="category-models-count-tag">6 Reference Models</span></div>
+              <div class="category-card-bottom-content">
+                <h3 class="category-card-name">Flagship Smartphones</h3>
+                <p class="category-card-desc">Titanium Grade 5 unibody frames, 200MP periscope sensors, and 120Hz LTPO Dynamic AMOLED.</p>
+                <span class="category-card-explore-btn">Explore Portfolio →</span>
+              </div>
+            </div>
+
+            <div class="category-portfolio-card" onclick="window.huzefaApp.filterByCategory('tvs')">
+              <img src="https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?auto=format&fit=crop&w=800&q=80" alt="TVs" class="category-portfolio-img" />
+              <div class="category-portfolio-overlay"></div>
+              <div class="category-card-top-content"><span class="category-models-count-tag">3 Reference Models</span></div>
+              <div class="category-card-bottom-content">
+                <h3 class="category-card-name">8K OLED evo Displays</h3>
+                <p class="category-card-desc">Micro Lens Array self-lit panels with infinite contrast, obsidian blacks, and acoustic surface audio.</p>
+                <span class="category-card-explore-btn">Explore Portfolio →</span>
+              </div>
+            </div>
+
+            <div class="category-portfolio-card" onclick="window.huzefaApp.filterByCategory('audio')">
+              <img src="https://images.unsplash.com/photo-1590658268037-6bf12165a8df?auto=format&fit=crop&w=800&q=80" alt="Audio" class="category-portfolio-img" />
+              <div class="category-portfolio-overlay"></div>
+              <div class="category-card-top-content"><span class="category-models-count-tag">5 Reference Models</span></div>
+              <div class="category-card-bottom-content">
+                <h3 class="category-card-name">Lossless Hi-Fi Audio</h3>
+                <p class="category-card-desc">Audiophile grade balanced armatures, LDAC 24-bit/96kHz transmission, and 48dB hybrid active cancellation.</p>
+                <span class="category-card-explore-btn">Explore Portfolio →</span>
+              </div>
+            </div>
+
+            <div class="category-portfolio-card" onclick="window.huzefaApp.filterByCategory('watches')">
+              <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80" alt="Watches" class="category-portfolio-img" />
+              <div class="category-portfolio-overlay"></div>
+              <div class="category-card-top-content"><span class="category-models-count-tag">4 Reference Models</span></div>
+              <div class="category-card-bottom-content">
+                <h3 class="category-card-name">Titanium Smart Watches</h3>
+                <p class="category-card-desc">Sapphire crystal dials, 3000 nits peak brightness, ECG sensors, and 100m water submersion rating.</p>
+                <span class="category-card-explore-btn">Explore Portfolio →</span>
+              </div>
+            </div>
+
+            <div class="category-portfolio-card" onclick="window.huzefaApp.filterByCategory('cameras')">
+              <img src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?auto=format&fit=crop&w=800&q=80" alt="Cameras" class="category-portfolio-img" />
+              <div class="category-portfolio-overlay"></div>
+              <div class="category-card-top-content"><span class="category-models-count-tag">3 Reference Models</span></div>
+              <div class="category-card-bottom-content">
+                <h3 class="category-card-name">Cinema 8K Optics</h3>
+                <p class="category-card-desc">Full-frame 61MP BSI sensors, internal 16-bit RAW capture, and 16 stops of dynamic range.</p>
+                <span class="category-card-explore-btn">Explore Portfolio →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================================
+           PAGE 4: DEALS & LIMITED ALLOCATIONS VIEW
+           ================================================================== -->
+      <div id="view-deals" class="showroom-view-page" style="display: none;">
+        <div class="site-container deals-page-wrap">
+          <div class="section-header-block">
+            <span class="section-eyebrow">Exclusive Allocations</span>
+            <h1 class="section-main-heading silver-gradient-text">Showroom Drops & Vouchers</h1>
+            <p class="section-subtext">Apply instant voucher credits at checkout or claim certified studio reference hardware with exclusive bundle savings.</p>
+          </div>
+
+          <!-- Voucher Cards -->
+          <div class="vouchers-grid">
+            <div class="voucher-card">
+              <div>
+                <span class="voucher-discount">40% OFF</span>
+                <p style="font-size: 0.85rem; color: #E2E8F0; margin-top: 0.2rem;">Titan Blade 18 Pro Gaming Laptop</p>
+                <span style="font-size: 0.72rem; color: #9CA3AF;">Use code at cart checkout</span>
+              </div>
+              <button class="voucher-code-copy-btn" onclick="window.huzefaApp.copyVoucherCode('TITAN40')">
+                <span>TITAN40</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+            </div>
+
+            <div class="voucher-card">
+              <div>
+                <span class="voucher-discount">10% OFF</span>
+                <p style="font-size: 0.85rem; color: #E2E8F0; margin-top: 0.2rem;">Sitewide Showroom Hardware</p>
+                <span style="font-size: 0.72rem; color: #9CA3AF;">No minimum purchase required</span>
+              </div>
+              <button class="voucher-code-copy-btn" onclick="window.huzefaApp.copyVoucherCode('WELCOME10')">
+                <span>WELCOME10</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+            </div>
+
+            <div class="voucher-card">
+              <div>
+                <span class="voucher-discount">$500 OFF</span>
+                <p style="font-size: 0.85rem; color: #E2E8F0; margin-top: 0.2rem;">8K OLED evo Cinema Displays</p>
+                <span style="font-size: 0.72rem; color: #9CA3AF;">Includes white-glove wall mounting</span>
+              </div>
+              <button class="voucher-code-copy-btn" onclick="window.huzefaApp.copyVoucherCode('STUDIO8K')">
+                <span>STUDIO8K</span>
+                <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></svg>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================================
+           PAGE 5: COMPARE LAB VIEW
+           ================================================================== -->
+      <div id="view-compare" class="showroom-view-page" style="display: none;">
+        <div class="site-container compare-page-wrap">
+          <div class="compare-hero-box">
+            <span class="section-eyebrow">Engineering Specifications</span>
+            <h1 class="section-main-heading silver-gradient-text">Showroom Compare Lab</h1>
+            <p class="section-subtext">Evaluate architecture, panel luminance, acoustic drivers, and thermal matrices side-by-side across our flagship electronics.</p>
+          </div>
+
+          <div class="compare-table-wrapper">
+            <table id="compare-matrix-table" class="compare-matrix-table"></table>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================================
+           PAGE 6: ABOUT & MANIFESTO VIEW
+           ================================================================== -->
+      <div id="view-about" class="showroom-view-page" style="display: none;">
+        <div class="site-container about-manifesto-wrap">
+          <div class="section-header-block">
+            <span class="section-eyebrow">The Huzefa Design Manifesto</span>
+            <h1 class="section-main-heading silver-gradient-text">Where Apple Precision, Samsung Luminance, & Sony Acoustics Converge</h1>
+            <p class="section-subtext">Founded on the premise that consumer electronics should be experienced as architectural artifacts — built with aerospace titanium, calibrated optics, and uncompromised audio purity.</p>
+          </div>
+
+          <!-- Key Metrics Grid -->
+          <div class="about-metrics-grid">
+            <div class="about-metric-card">
+              <div class="metric-number">18,500+</div>
+              <div class="metric-label">Showroom Deliveries</div>
+            </div>
+            <div class="about-metric-card">
+              <div class="metric-number">99.8%</div>
+              <div class="metric-label">Client Satisfaction</div>
+            </div>
+            <div class="about-metric-card">
+              <div class="metric-number">42</div>
+              <div class="metric-label">Countries Serviced</div>
+            </div>
+            <div class="about-metric-card">
+              <div class="metric-number">3 Years</div>
+              <div class="metric-label">Standard Platinum Warranty</div>
+            </div>
+          </div>
+
+          <!-- Team Leadership -->
+          <div class="section-header-block" style="margin-top: 5rem;">
+            <span class="section-eyebrow">Architects of Innovation</span>
+            <h2 class="section-main-heading silver-gradient-text">Executive Showroom Leadership</h2>
+          </div>
+
+          <div class="team-grid">
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=600&q=80" alt="Huzefa Qureshi" class="team-photo" />
+              <div class="team-info">
+                <h3 class="team-name">Huzefa Qureshi</h3>
+                <span class="team-role">Founder & Chief Architect</span>
+                <p class="team-bio">Former acoustics consultant and industrial designer dedicated to unibody aerospace materials and studio transducers.</p>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=600&q=80" alt="Elena Rostova" class="team-photo" />
+              <div class="team-info">
+                <h3 class="team-name">Elena Rostova</h3>
+                <span class="team-role">VP of Acoustic Engineering</span>
+                <p class="team-bio">Pioneered custom balanced armature drivers and psychoacoustic spatial algorithms over 15 years in Zurich labs.</p>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=600&q=80" alt="Kenji Takahashi" class="team-photo" />
+              <div class="team-info">
+                <h3 class="team-name">Kenji Takahashi</h3>
+                <span class="team-role">Director of Display Calibration</span>
+                <p class="team-bio">Master Calman calibrator for film academies and creator of our 8K micro-luma testing matrix.</p>
+              </div>
+            </div>
+
+            <div class="team-card">
+              <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=600&q=80" alt="Julian Sterling" class="team-photo" />
+              <div class="team-info">
+                <h3 class="team-name">Julian Sterling</h3>
+                <span class="team-role">Head of White-Glove Logistics</span>
+                <p class="team-bio">Oversees our armored climate-controlled delivery fleet ensuring flawless handoffs directly to VIP clients globally.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ==================================================================
+           PAGE 7: CONTACT & ADVISORY VIEW
+           ================================================================== -->
+      <div id="view-contact" class="showroom-view-page" style="display: none;">
+        <div class="site-container contact-page-wrap">
+          <div class="section-header-block">
+            <span class="section-eyebrow">Showroom Advisory</span>
+            <h1 class="section-main-heading silver-gradient-text">Connect With Huzefa Concierge</h1>
+            <p class="section-subtext">Book a private listening room appointment, request a customized workstation build, or speak directly with our acoustic engineers.</p>
+          </div>
+
+          <!-- ── Store Photo Hero Card ─────────────────────────── -->
+          <div class="contact-store-hero">
+            <div class="contact-store-img-wrap">
+              <img
+                src="store-selfie.jpg"
+                alt="Huzefa Electronics Store — Store Boy Huzefa"
+                class="contact-store-img"
+                onerror="this.parentElement.style.display='none'"
+              />
+              <!-- Gradient overlay -->
+              <div class="contact-store-overlay"></div>
+              <!-- Floating store info chips -->
+              <div class="contact-store-chips">
+                <span class="contact-store-chip chip-live">
+                  <span class="chip-dot"></span> Open Now
+                </span>
+                <span class="contact-store-chip">📍 Huzefa Electronics</span>
+                <span class="contact-store-chip">🏪 Store Boy — Huzefa</span>
+              </div>
+              <!-- Bottom tagline overlay -->
+              <div class="contact-store-tagline-bar">
+                <div class="contact-store-tagline-inner">
+                  <div class="contact-tagline-logo">
+                    <svg viewBox="0 0 44 44" fill="none" width="34" height="34">
+                      <rect width="44" height="44" rx="8" fill="#0D1B2A"/>
+                      <rect x="6" y="5" width="7" height="34" rx="2" fill="white"/>
+                      <rect x="31" y="5" width="7" height="34" rx="2" fill="white"/>
+                      <polygon points="6,25 13,25 38,19 31,19" fill="white"/>
+                      <polygon points="16,25 22,19 28,19 22,25" fill="#009FE3"/>
+                    </svg>
+                  </div>
+                  <div>
+                    <div class="contact-tagline-name">Huzefa Electronics</div>
+                    <div class="contact-tagline-sub">Powering Your Digital Future</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ──────────────────────────────────────────────────── -->
+
+          <div class="contact-split-grid">
+            <!-- Left Info Card -->
+            <div class="contact-info-card">
+              <h3 style="font-size: 1.4rem; color: #fff;">Flagship Showroom</h3>
+              <p style="font-size: 0.88rem; color: #9CA3AF;">Private appointments available Monday through Sunday for VIP listening chamber demonstrations.</p>
+
+              <div class="contact-item-row">
+                <div class="contact-item-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 0.95rem; color: #fff;">Silicon Horizon Gallery</h4>
+                  <p style="font-size: 0.8rem; color: #9CA3AF;">742 Silicon Horizon Blvd, Suite 100<br/>San Francisco, CA 94107</p>
+                </div>
+              </div>
+
+              <div class="contact-item-row">
+                <div class="contact-item-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 0.95rem; color: #fff;">Concierge Direct</h4>
+                  <p style="font-size: 0.8rem; color: #9CA3AF;">+1-800-848-9332 (Toll-Free)<br/>concierge@huzefa-electronics.com</p>
+                </div>
+              </div>
+
+              <div class="contact-item-row">
+                <div class="contact-item-icon">
+                  <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                </div>
+                <div>
+                  <h4 style="font-size: 0.95rem; color: #fff;">Private Gallery Hours</h4>
+                  <p style="font-size: 0.8rem; color: #9CA3AF;">Monday – Saturday: 10:00 AM – 8:00 PM PST<br/>Sunday: By Private Concierge Reservation</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Form Card -->
+            <form id="showroom-contact-form" class="contact-form-card">
+              <h3 style="font-size: 1.3rem; color: #fff;">Request Showroom Appointment</h3>
+
+              <div class="form-group">
+                <label class="form-label">Full Name</label>
+                <input type="text" class="form-input" placeholder="e.g. Huzefa Qureshi" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input type="email" class="form-input" placeholder="you@luxurytech.com" required />
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Inquiry Area</label>
+                <select class="form-select">
+                  <option>Private Listening Room Demo</option>
+                  <option>8K Home Cinema Acoustic Calibration</option>
+                  <option>Custom Titan Workstation Build</option>
+                  <option>White-Glove Fleet Delivery Status</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label class="form-label">Consultation Notes</label>
+                <textarea class="form-textarea" rows="4" placeholder="Tell our acoustic engineers about your audio-visual goals..."></textarea>
+              </div>
+
+              <button type="submit" class="btn-primary" style="margin-top: 0.5rem;">
+                Submit Appointment Request
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+    </main>
+
+    <!-- ==================================================================
+         MODALS & SLIDE-OUT DRAWERS SYSTEM
+         ================================================================== -->
+
+    <!-- Quick View / 3D Inspection Modal -->
+    <div id="quickview-modal-backdrop" class="modal-overlay-backdrop">
+      <div class="modal-dialog-box">
+        <button class="modal-close-btn" onclick="window.huzefaApp.closeQuickView()" title="Close">✕</button>
+        <div class="quickview-modal-grid">
+          <!-- Left: 3D Canvas Stage -->
+          <div class="quickview-3d-stage">
+            <div id="quickview-three-container"></div>
+          </div>
+
+          <!-- Right: Details -->
+          <div style="display: flex; flex-direction: column; gap: 1rem;">
+            <span id="qv-category" style="font-size: 0.72rem; text-transform: uppercase; letter-spacing: 0.15em; color: #00E5FF; font-weight: 700;"></span>
+            <h2 id="qv-title" style="font-size: 1.8rem; font-weight: 800; line-height: 1.1; color: #fff;"></h2>
+            <p id="qv-subtitle" style="font-size: 0.85rem; color: #9CA3AF;"></p>
+
+            <div style="display: flex; align-items: baseline; gap: 1rem;">
+              <span id="qv-price" style="font-size: 1.8rem; font-weight: 800; color: #fff; font-family: var(--font-display);"></span>
+              <span id="qv-rating" style="font-size: 0.8rem; color: #F59E0B;"></span>
+            </div>
+
+            <p id="qv-description" style="font-size: 0.85rem; color: #D1D5DB; line-height: 1.5;"></p>
+
+            <!-- Color Swatches -->
+            <div>
+              <span style="font-size: 0.75rem; text-transform: uppercase; color: #8B9095; font-weight: 700; letter-spacing: 0.05em; display: block; margin-bottom: 0.4rem;">Color Swatch</span>
+              <div id="qv-swatches-list" class="swatches-list"></div>
+            </div>
+
+            <!-- Specs Summary -->
+            <div id="qv-specs-list" style="margin-top: 0.5rem;"></div>
+
+            <!-- Actions Row -->
+            <div style="display: flex; align-items: center; gap: 1rem; margin-top: 1rem;">
+              <div class="cart-qty-counter">
+                <button id="qv-qty-minus" class="qty-btn">−</button>
+                <span id="qv-qty-num" class="qty-num">1</span>
+                <button id="qv-qty-plus" class="qty-btn">+</button>
+              </div>
+              <button id="qv-add-cart-btn" class="btn-primary" style="flex: 1;">
+                Add to Showroom Cart
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Drawer -->
+    <div id="cart-drawer-backdrop" class="slide-drawer-backdrop">
+      <div class="slide-drawer-panel">
+        <div class="drawer-header">
+          <div class="drawer-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+            Showroom Cart
+          </div>
+          <button onclick="window.huzefaApp.closeCartDrawer()" style="color: #8B9095; font-size: 1.2rem;">✕</button>
+        </div>
+
+        <div class="drawer-body">
+          <!-- Free shipping bar -->
+          <div class="free-shipping-box">
+            <span id="shipping-text" style="font-size: 0.78rem; font-weight: 600; color: #00E5FF;">Add $1,000 for Free Armored Express Shipping</span>
+            <div class="shipping-bar-track">
+              <div id="shipping-bar-fill" class="shipping-bar-fill" style="width: 0%;"></div>
+            </div>
+          </div>
+
+          <!-- Items List -->
+          <div id="cart-items-list" style="display: flex; flex-direction: column; gap: 1rem;"></div>
+        </div>
+
+        <div class="drawer-footer">
+          <!-- Promo Code Input -->
+          <div style="display: flex; gap: 0.5rem;">
+            <input type="text" id="cart-promo-input" placeholder="Promo code (e.g. TITAN40)" class="form-input" style="flex: 1; padding: 0.5rem 0.75rem; font-size: 0.8rem;" />
+            <button class="btn-secondary" style="padding: 0.5rem 0.85rem; font-size: 0.8rem;" onclick="window.huzefaApp.applyPromoCode(document.getElementById('cart-promo-input').value)">Apply</button>
+          </div>
+
+          <!-- Price Summary -->
+          <div style="display: flex; flex-direction: column; gap: 0.4rem; font-size: 0.85rem;">
+            <div style="display: flex; justify-content: space-between; color: #9CA3AF;">
+              <span>Subtotal:</span>
+              <span id="cart-subtotal" style="color: #fff; font-weight: 600;">$0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; color: #00E5FF;">
+              <span>Showroom Voucher:</span>
+              <span id="cart-discount">-$0</span>
+            </div>
+            <div style="display: flex; justify-content: space-between; font-size: 1.15rem; font-weight: 800; color: #fff; padding-top: 0.5rem; border-top: 1px solid var(--border-glass);">
+              <span>Final Total:</span>
+              <span id="cart-total" style="color: #00E5FF; font-family: var(--font-display);">$0</span>
+            </div>
+          </div>
+
+          <button class="btn-primary" style="width: 100%;" onclick="window.huzefaApp.handleCheckout()">
+            Proceed to Secure Checkout
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Wishlist Drawer -->
+    <div id="wishlist-drawer-backdrop" class="slide-drawer-backdrop">
+      <div class="slide-drawer-panel">
+        <div class="drawer-header">
+          <div class="drawer-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 14c1.49-1.46 3-3.21 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.76 0-3 .5-4.5 2-1.5-1.5-2.74-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4.05 3 5.5l7 7Z"/></svg>
+            Showroom Wishlist
+          </div>
+          <button onclick="window.huzefaApp.closeWishlistDrawer()" style="color: #8B9095; font-size: 1.2rem;">✕</button>
+        </div>
+        <div class="drawer-body">
+          <div id="wishlist-items-list" style="display: flex; flex-direction: column; gap: 1rem;"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- AI Concierge Drawer -->
+    <div id="ai-drawer-backdrop" class="slide-drawer-backdrop">
+      <div class="slide-drawer-panel">
+        <div class="drawer-header">
+          <div class="drawer-title">
+            <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 8V4H8"/><rect width="16" height="12" x="4" y="8" rx="2"/><path d="M2 14h2"/><path d="M20 14h2"/><path d="M15 13v2"/><path d="M9 13v2"/></svg>
+            Showroom AI Advisor
+          </div>
+          <button onclick="window.huzefaApp.closeAIDrawer()" style="color: #8B9095; font-size: 1.2rem;">✕</button>
+        </div>
+        <div class="drawer-body">
+          <div id="chat-messages-container" class="chat-messages-container">
+            <div class="chat-bubble chat-bubble-ai">
+              Welcome to Huzefa Electronics Concierge. I am your personal luxury technology advisor. Whether you are calibrating an 8K home theater, seeking an RTX 4090 workstation, or discovering reference-grade spatial audio, how may I assist you today?
+            </div>
+          </div>
+          <div class="quick-prompts-list">
+            <button class="prompt-chip-btn" onclick="document.getElementById('ai-chat-input').value='Recommend best gaming laptop'; document.getElementById('ai-chat-form').dispatchEvent(new Event('submit'));">Gaming Laptop</button>
+            <button class="prompt-chip-btn" onclick="document.getElementById('ai-chat-input').value='Earbuds with best ANC'; document.getElementById('ai-chat-form').dispatchEvent(new Event('submit'));">Spatial Audio</button>
+            <button class="prompt-chip-btn" onclick="document.getElementById('ai-chat-input').value='8K OLED TV details'; document.getElementById('ai-chat-form').dispatchEvent(new Event('submit'));">8K OLED TV</button>
+            <button class="prompt-chip-btn" onclick="document.getElementById('ai-chat-input').value='Smartphone camera specs'; document.getElementById('ai-chat-form').dispatchEvent(new Event('submit'));">200MP Zoom</button>
+          </div>
+        </div>
+        <div class="drawer-footer">
+          <form id="ai-chat-form" class="chat-input-bar">
+            <input type="text" id="ai-chat-input" placeholder="Ask about specs, acoustics, or displays..." />
+            <button type="submit" class="btn-primary" style="padding: 0.45rem 0.9rem; font-size: 0.8rem;">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Search Modal -->
+    <div id="search-modal-backdrop" class="modal-overlay-backdrop">
+      <div class="modal-dialog-box" style="max-width: 650px;">
+        <button class="modal-close-btn" onclick="window.huzefaApp.closeSearchModal()">✕</button>
+        <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: #fff;">Search Showroom Catalog</h3>
+        <input type="text" id="search-modal-input" placeholder="Type product name, category, or spec..." class="form-input" style="width: 100%; font-size: 1.05rem; padding: 0.85rem 1rem;" />
+        <div id="search-modal-results" style="margin-top: 1.5rem; max-height: 380px; overflow-y: auto; display: flex; flex-direction: column; gap: 0.75rem;">
+          <p style="text-align: center; color: #8B9095; padding: 2rem;">Type product name, category, or spec...</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Order Tracking Modal -->
+    <div id="ordertrack-modal-backdrop" class="modal-overlay-backdrop">
+      <div class="modal-dialog-box" style="max-width: 600px;">
+        <button class="modal-close-btn" onclick="window.huzefaApp.closeOrderTrackModal()">✕</button>
+        <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Track Armored Freight Delivery</h3>
+        <p style="font-size: 0.85rem; color: #9CA3AF; margin-bottom: 1.5rem;">Enter your Huzefa Showroom tracking ID for live armored vehicle coordinates.</p>
+
+        <div style="display: flex; gap: 0.5rem;">
+          <input type="text" id="order-tracking-input" value="HZF-892410" class="form-input" style="flex: 1;" />
+          <button class="btn-primary" onclick="window.huzefaApp.showToast('Updated tracking coordinates!')">Locate</button>
+        </div>
+
+        <div class="tracking-stepper-wrap">
+          <div class="stepper-step-item completed">
+            <div class="stepper-dot">✓</div>
+            <div>
+              <div style="font-size: 0.9rem; font-weight: 700; color: #fff;">Order Confirmed & Verified</div>
+              <div style="font-size: 0.75rem; color: #9CA3AF;">Concierge allocation approved</div>
+            </div>
+          </div>
+
+          <div class="stepper-step-item completed">
+            <div class="stepper-dot">✓</div>
+            <div>
+              <div style="font-size: 0.9rem; font-weight: 700; color: #fff;">Laboratory Calibration</div>
+              <div style="font-size: 0.75rem; color: #9CA3AF;">Micro-luma & acoustic testing passed</div>
+            </div>
+          </div>
+
+          <div class="stepper-step-item completed">
+            <div class="stepper-dot">✓</div>
+            <div>
+              <div style="font-size: 0.9rem; font-weight: 700; color: #fff;">Dispatched in Armored Transport</div>
+              <div style="font-size: 0.75rem; color: #9CA3AF;">Climate-controlled flight in transit</div>
+            </div>
+          </div>
+
+          <div class="stepper-step-item active">
+            <div class="stepper-dot">●</div>
+            <div>
+              <div style="font-size: 0.9rem; font-weight: 700; color: #00E5FF;">Out for Delivery (Silicon Valley Hub)</div>
+              <div style="font-size: 0.75rem; color: #9CA3AF;">Courier arrival expected today by 4:30 PM</div>
+            </div>
+          </div>
+
+          <div class="stepper-step-item">
+            <div class="stepper-dot">○</div>
+            <div>
+              <div style="font-size: 0.9rem; font-weight: 700; color: #6B7280;">White-Glove Handshake Signature</div>
+              <div style="font-size: 0.75rem; color: #6B7280;">VIP client inspection & setup</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIP Account Auth Modal -->
+    <div id="auth-modal-backdrop" class="modal-overlay-backdrop">
+      <div class="modal-dialog-box" style="max-width: 480px;">
+        <button class="modal-close-btn" onclick="window.huzefaApp.closeAuthModal()">✕</button>
+        <h3 style="font-size: 1.4rem; color: #fff; margin-bottom: 0.5rem;">Huzefa VIP Portal</h3>
+        <p style="font-size: 0.85rem; color: #9CA3AF; margin-bottom: 1.5rem;">Access private allocation drops, warranty certificates, and listening appointments.</p>
+
+        <form onsubmit="event.preventDefault(); window.huzefaApp.showToast('Welcome to Huzefa VIP!'); window.huzefaApp.closeAuthModal();" style="display: flex; flex-direction: column; gap: 1rem;">
+          <div class="form-group">
+            <label class="form-label">Email Address</label>
+            <input type="email" class="form-input" placeholder="vip@client.com" required />
+          </div>
+          <div class="form-group">
+            <label class="form-label">Security Key / Password</label>
+            <input type="password" class="form-input" placeholder="••••••••" required />
+          </div>
+          <button type="submit" class="btn-primary" style="margin-top: 0.5rem;">Enter VIP Portal</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="site-toast"></div>
+
+    <!-- Floating Scroll-To-Top Button -->
+    <button id="scroll-top-btn" title="Back to Top">
+      <svg width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><polyline points="18 15 12 9 6 15"/></svg>
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="site-container">
+        <div class="footer-top-grid">
+          <div>
+            <div class="brand-logo" style="cursor: default;">
+              <div class="brand-icon">
+                <svg width="22" height="22" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="m12 3-1.912 5.813a2 2 0 0 1-1.275 1.275L3 12l5.813 1.912a2 2 0 0 1 1.275 1.275L12 21l1.912-5.813a2 2 0 0 1 1.275-1.275L21 12l-5.813-1.912a2 2 0 0 1-1.275-1.275L12 3Z"/></svg>
+              </div>
+              <span class="silver-gradient-text">HUZEFA</span>
+              <span style="font-size: 0.8rem; font-weight: 500; color: #00E5FF; letter-spacing: 0.15em; margin-left: -4px;">ELECTRONICS</span>
+            </div>
+            <p class="footer-brand-bio">An immersive 3D technology showroom inspired by the precision engineering of Apple, the panel innovation of Samsung, and the studio acoustics of Sony.</p>
+            <span style="font-size: 0.8rem; color: #8B9095;">Showroom Concierge: +1-800-848-9332</span>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Portfolios</h4>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.filterByCategory('gaming')">Gaming Laptops</a></li>
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.filterByCategory('smartphones')">Smartphones</a></li>
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.filterByCategory('tvs')">8K OLED TVs</a></li>
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.filterByCategory('audio')">Hi-Fi Audio</a></li>
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.filterByCategory('watches')">Smart Watches</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">Services</h4>
+            <ul class="footer-links-list">
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.openOrderTrackModal()">Order Tracking</a></li>
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.navigateTo('compare')">Compare Lab</a></li>
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.navigateTo('deals')">Voucher Drops</a></li>
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.openAIDrawer()">AI Concierge</a></li>
+              <li class="footer-link-item"><a href="javascript:void(0)" onclick="window.huzefaApp.navigateTo('contact')">Book Advisory</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 class="footer-heading">VIP Allocation Dispatch</h4>
+            <p style="font-size: 0.8rem; color: #9CA3AF;">Receive early notifications for limited hardware production runs and certified laboratory reference releases.</p>
+            <form class="newsletter-form-row" onsubmit="event.preventDefault(); window.huzefaApp.showToast('Subscribed to VIP Allocations!'); this.reset();">
+              <input type="email" placeholder="Your executive email" class="newsletter-input" required />
+              <button type="submit" class="newsletter-submit-btn">Join</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer-bottom-bar">
+          <div>© 2026 Huzefa Electronics Inc. All rights reserved. Precision-milled & calibrated in San Francisco, CA.</div>
+          <div style="display: flex; gap: 1.5rem;">
+            <span>Privacy Policy</span>
+            <span>Terms of Service</span>
+            <span>Security Statement</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Three.js (r128 CDN) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Canvas Confetti -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.4/dist/confetti.browser.min.js"></script>
+
+    <!-- Huzefa 3D Showroom WebGL Engine -->
+    <script src="three-scene.js"></script>
+
+    <!-- Main Interactive Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
